@@ -1,1 +1,1 @@
-Write a C program that prints exactly a specified string
+Write a C program that print exactly a specified string
