@@ -1,29 +1,31 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * isSqrt - helper function for _sqrt_recursion
- * @n: input number
- * @i: iteratotr
- * Return: square root of number
+ * _sqrt_recursion - find natural square root
+ * @n: int
+ * Return: int
  */
 
-int isSqrt(int n, int i)
+int _sqrt_recursion(int n)
 {
-	if (i * i > n)
-		return (-1);
-	if (i * i == n)
-		return (i);
-	return (isSqrt(n, i + 1));
+return (square(n, 1));
 }
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: input number
- * Return: square root of number, -1 if false
+ * square - find square root
+ * @n: int to find square root
+ * @val: square root
+ * Return: int
  */
-int _sqrt_recursion(int n)
+
+int square(int n, int val)
 {
-	if (n < 0)
-		return (-1);
-	return (isSqrt(n, 1));
+
+if (val * val == n)
+	return (val);
+else if (val * val < n)
+	return  (square(n, val + 1));
+else
+	return (-1);
+
 }
